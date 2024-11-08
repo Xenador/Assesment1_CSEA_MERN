@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="Resume.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Resume Builder</h1>
+
+        <!-- Form for entering resume information -->
+        <form id="resumeForm">
+            
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="input-group">
+                <label for="linkedin">LinkedIn Profile</label>
+                <input type="url" id="linkedin" placeholder="LinkedIn profile URL" required>
+            </div>
+
+            <div class="input-group">
+                <label for="github">GitHub Profile</label>
+                <input type="url" id="github" placeholder="GitHub profile URL" required>
+            </div>
+
+            <div class="input-group">
+                <label for="workExperience">Work Experience</label>
+                <textarea id="workExperience" placeholder="Describe your work experience" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="education">Education</label>
+                <textarea id="education" placeholder="Describe your education" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="photo">Upload Photo</label>
+                <input type="file" id="photo" accept="image/*" required>
+            </div>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+
+        <!-- Resume output preview -->
+        <div id="resumeOutput" class="resume-output" style="display: none;">
+            <div id="resumePreview">
+                <button onclick="downloadResume()">Download as PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="Resume.js"></script>
+</body>
+
+</html>
